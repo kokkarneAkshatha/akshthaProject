@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<div class="intro-content">
+   
+<div class="w3-container w3-content" style="max-width:1400px ;margin-top:100px">
+    
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Middle Column -->
+        <aside class="col-sm-4">
+            <div class="card">
+                <article class="card-body" >
+                    <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
+                    <hr>
+                    <form [formGroup]="loginForm" class="needs-validation" (ngSubmit)="onSubmit()" novalidate>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input name="userId" class="form-control" formControlName="userId"
+                                [ngClass]="{ 'is-invalid': submitted && f.userId.errors }"
+                                placeholder="Enter User Id" type="text" minlength=8 required>
+                                    <div class="invalid-feedback">Please Enter UserId valid charcter</div>
+                                    
+                            </div> <!-- input-group.// -->
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                </div>
+                                <input class="form-control" formControlName="password" placeholder="******"
+                                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" type="password" required>
+                                    <div class="invalid-feedback">Please Enter valid Password</div>
+                            </div> <!-- input-group.// -->
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block"> Login </button>
+                            <button type="submit" class="btn btn-default btn-block" routerLink="/register" routerLinkActive="active"> Sign Up </button>
+                        </div> <!-- form-group// -->
+                        <p class="text-center"><a href="#" class="btn">Forgot password?</a></p>
+                    </form>
+                </article>
+            </div> <!-- card.// -->
+        </aside> <!-- col.// -->
+        <!-- End Grid -->
+    </div>
+    <!-- End Page Container -->
+</div>
+
+
+</div>
