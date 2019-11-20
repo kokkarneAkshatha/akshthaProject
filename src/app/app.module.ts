@@ -19,6 +19,10 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { Navigationbar2Component } from './navigationbar2/navigationbar2.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OtpformComponent } from './otpform/otpform.component';
+import { ConformpasswordformComponent } from './conformpasswordform/conformpasswordform.component';
+import { UserIdComponent } from './user-id/user-id.component';
+import { EqualValidatorDirective } from './equal-validator.directive';
 
 
 @NgModule({
@@ -35,7 +39,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     RegistrationComponent,
     Navigationbar2Component,
-    DashboardComponent
+    DashboardComponent,
+    OtpformComponent,
+    ConformpasswordformComponent,
+    UserIdComponent,
+    EqualValidatorDirective
   ],
   imports: [
     BrowserModule,
@@ -78,8 +86,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       data: {  show: false }
     },
     {
+      path:'otpform',
+      component:OtpformComponent,
+      data: { showHeader: false ,show:false,showFooter:false}
+    },
+    {
       path:'register',
       component:RegistrationComponent,
+      data: {  showHeader: false ,show:false,showFooter:false }
+    },
+    {
+      path:'confirmform',
+      component:ConformpasswordformComponent,
       data: {  showHeader: false ,show:false,showFooter:false }
     },
     

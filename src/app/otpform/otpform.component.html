@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:100%;margin-top:200px;margin-left:590px ">
+        <!-- The Grid -->
+        <div class="w3-row">
+            <!-- Middle Column -->
+            <aside class="col-sm-4">
+                <div class="card" >
+                    <article class="card-body">
+                        <h4 class="card-title text-center mb-4 mt-1">Enter One Time Password(OTP)</h4>
+                        <hr>
+                        <form class="needs-validation" [formGroup]="otpForm" (ngSubmit)="onSubmit()" 
+                        novalidate>
+                                <div class="form-group">
+                                        <label for="phone">Phone:</label>
+                                        <input type="tel" class="form-control"
+                                            pattern="[1-9]{1}[0-9]{9}" name="phone" id="phone" formControlName="phone"
+                                            maxlength="10" placeholder="Enter Phone Number" required>
+                                        
+                                </div>
+                                      <div class="form-group">
+                                        <label for="otp">OTP</label>
+                                        <input type="text" class="form-control" id="otp" placeholder="Enter OTP" 
+                                        formControlName="otp" required>
+                                        <div class="invalid-feedback">Enter Valid Phone number</div>
+                                      </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block"routerLink="/confirmform" routerLinkActive="active"> Next</button>
+                                
+                            </div> <!-- form-group// -->
+                            
+                        </form>
+                    </article>
+                </div> <!-- card.// -->
+            </aside> <!-- col.// -->
+            <!-- End Grid -->
+        </div>
+        <!-- End Page Container -->
+    </div>
+    <br>
+    
