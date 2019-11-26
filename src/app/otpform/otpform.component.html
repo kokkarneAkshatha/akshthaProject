@@ -14,25 +14,26 @@
             <aside class="col-sm-4">
                 <div class="card" >
                     <article class="card-body">
-                        <h4 class="card-title text-center mb-4 mt-1">Enter One Time Password(OTP)</h4>
+                        <h4 class="card-title text-center mb-4 mt-1">Enter One Time Password</h4>
                         <hr>
                         <form class="needs-validation" [formGroup]="otpForm" (ngSubmit)="onSubmit()" 
                         novalidate>
                                 <div class="form-group">
-                                        <label for="phone">Phone:</label>
-                                        <input type="tel" class="form-control"
-                                            pattern="[1-9]{1}[0-9]{9}" name="phone" id="phone" formControlName="phone"
-                                            maxlength="10" placeholder="Enter Phone Number" required>
-                                        
+                                        <label for="email">Email:</label>
+                                        <input type="email" [(ngModel)]="sharedService.otp.email"  class="form-control"
+                                          name="email" id="email" formControlName="email"
+                                              required>
+                                              
                                 </div>
+
                                       <div class="form-group">
-                                        <label for="otp">OTP</label>
-                                        <input type="text" class="form-control" id="otp" placeholder="Enter OTP" 
-                                        formControlName="otp" required>
+                                        <label for="otp1">OTP</label>
+                                        <input type="text" [(ngModel)]="sharedService.otp.otp1"  class="form-control" id="otp1" placeholder="Enter OTP" 
+                                        formControlName="otp1" required>
                                         <div class="invalid-feedback">Enter Valid Phone number</div>
                                       </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block"routerLink="/confirmform" routerLinkActive="active"> Next</button>
+                                <button type="submit" class="btn btn-primary btn-block"> Next</button>
                                 
                             </div> <!-- form-group// -->
                             

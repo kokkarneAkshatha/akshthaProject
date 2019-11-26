@@ -23,7 +23,9 @@ import { OtpformComponent } from './otpform/otpform.component';
 import { ConformpasswordformComponent } from './conformpasswordform/conformpasswordform.component';
 import { UserIdComponent } from './user-id/user-id.component';
 import { EqualValidatorDirective } from './equal-validator.directive';
-
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [
@@ -43,9 +45,13 @@ import { EqualValidatorDirective } from './equal-validator.directive';
     OtpformComponent,
     ConformpasswordformComponent,
     UserIdComponent,
-    EqualValidatorDirective
+    EqualValidatorDirective,
+    
+    
   ],
   imports: [
+    HttpClientModule,
+    HttpModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -68,6 +74,11 @@ import { EqualValidatorDirective } from './equal-validator.directive';
       path:'Hospital',
       component:HospitalDetailsComponent,
       data: {  show: false } 
+    },
+    {
+      path:'dashboard',
+      component:DashboardComponent,
+      
     },
      
     {
@@ -100,11 +111,16 @@ import { EqualValidatorDirective } from './equal-validator.directive';
       component:ConformpasswordformComponent,
       data: {  showHeader: false ,show:false,showFooter:false }
     },
+    {
+      path:'userId',
+      component:UserIdComponent,
+      data: {  showHeader: false ,show:false,showFooter:false }
+    },
     
     ])
 
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
