@@ -51,13 +51,13 @@ onSubmit(model: Login) {
   if (this.loginForm.invalid) {
       return;
   }
-  else{
-  var temp= this.userService.authentication(this.sharedService.login).subscribe()
-  console.log(temp)
+  // else{
+  // var temp= this.userService.authentication(this.sharedService.login).subscribe()
+  // console.log(temp)
     
   
 
-  }
+  // }
   // display form values on success
   //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginForm.value, null, 4));
 }

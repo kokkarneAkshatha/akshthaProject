@@ -26,6 +26,9 @@ import { EqualValidatorDirective } from './equal-validator.directive';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SharedService } from './shared.service';
+import { DoctorslotComponent } from './doctorslot/doctorslot.component';
+import { DateandtimeComponent } from './dateandtime/dateandtime.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { SharedService } from './shared.service';
     ConformpasswordformComponent,
     UserIdComponent,
     EqualValidatorDirective,
+    DoctorslotComponent,
+    DateandtimeComponent,
+    PaymentComponent,
     
     
   ],
@@ -58,7 +64,8 @@ import { SharedService } from './shared.service';
     ReactiveFormsModule,
     RouterModule.forRoot([{
       path:'Enquire',
-      component:EnquireComponent
+      component:EnquireComponent,
+      data: {  show: false }
     },
     {
       path:'',
@@ -78,6 +85,7 @@ import { SharedService } from './shared.service';
     {
       path:'dashboard',
       component:DashboardComponent,
+      data: {  show: false ,showHeader:false,showFooter:false} 
       
     },
      
@@ -114,6 +122,26 @@ import { SharedService } from './shared.service';
     {
       path:'userId',
       component:UserIdComponent,
+      data: {  showHeader: false ,show:false,showFooter:false }
+    },
+    {
+      path:'appointmentfront',
+      component:AppoinmentFrontComponent,
+      data: {  showHeader: false ,show:false,showFooter:false }
+    },
+    {
+      path:'doctorslot',
+      component:DoctorslotComponent,
+      data: {  showHeader: false ,show:false,showFooter:false }
+    },
+    {
+      path:'dateandtime',
+      component:DateandtimeComponent,
+      data: {  showHeader: false ,show:false,showFooter:false }
+    },
+    {
+      path:'payment',
+      component:PaymentComponent,
       data: {  showHeader: false ,show:false,showFooter:false }
     },
     
