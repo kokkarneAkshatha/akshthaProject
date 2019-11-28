@@ -10,7 +10,7 @@
 
 <div class="container text-center">
     <h3>Appointment Details:</h3>
-  <table class="table table-borderless">
+  <table class="table table-borderless" *ngFor="let app of appointment">
    
       <tr>
         <th>Name</th>
@@ -21,12 +21,12 @@
     <tbody>
       <tr>
         <th>Date</th>
-        <td>24/11/2019</td>
+        <td>{{app.date}}</td>
        
       </tr>
       <tr>
         <th>Time</th>
-        <td>9:15 am</td>
+        <td>{{app.time}}am</td>
        
       </tr>
      

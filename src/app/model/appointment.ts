@@ -9,6 +9,6 @@ export class Appointment {
 	   slot:Time;
 	
 	doctor_id:Number;
-	patient_id:Number;
+	patient_id:String;
 	  isfeepaid: boolean;
 }

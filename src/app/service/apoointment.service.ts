@@ -18,8 +18,8 @@ export class ApoointmentService {
   constructor(private http: HttpClient) {
     this.usersUrl = 'http://localhost:1234/api/appointment';
   }
-  public findAll(): Observable< Appointment[]> {
-    return this.http.get< Appointment[]>(this.usersUrl);
+  public findAll(): Observable< Appointment> {
+    return this.http.get< Appointment>(this.usersUrl);
   }
 
   public save(user: Appointment) {
