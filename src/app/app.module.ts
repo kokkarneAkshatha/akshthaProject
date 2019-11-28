@@ -29,6 +29,7 @@ import { SharedService } from './shared.service';
 import { DoctorslotComponent } from './doctorslot/doctorslot.component';
 import { DateandtimeComponent } from './dateandtime/dateandtime.component';
 import { PaymentComponent } from './payment/payment.component';
+import { MyAppointmentComponent } from './my-appointment/my-appointment.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { PaymentComponent } from './payment/payment.component';
     DoctorslotComponent,
     DateandtimeComponent,
     PaymentComponent,
+    MyAppointmentComponent,
     
     
   ],
@@ -144,6 +146,12 @@ import { PaymentComponent } from './payment/payment.component';
       component:PaymentComponent,
       data: {  showHeader: false ,show:false,showFooter:false }
     },
+    {
+      path:'myappointment',
+      component:MyAppointmentComponent,
+      data: {  showHeader: false ,show:false,showFooter:false }
+    },
+    
     
     ])
 
